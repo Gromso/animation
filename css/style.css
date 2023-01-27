@@ -1,0 +1,96 @@
+* {
+    box-sizing: border-box;
+}
+body{
+    background-color: red;
+}
+
+#main-container {
+    perspective: 700px;
+    position: relative;
+    width: 300px;
+    height: 220px;
+    margin: 180px auto;
+    
+}
+
+
+#tile-container {
+    transform: translateZ(-350px) translateY(20px)  rotate3d(0, 1, 0, -20deg) ;
+    transform-style: preserve-3d;
+    animation-name: carousel-animation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    
+}
+
+@keyframes carousel-animation {
+    0%{
+        transform: translateZ(-200px) rotate3d(0,1,0, 0deg);
+    }
+    15%{
+      transform: translateZ(-200px) rotate3d(0,1,0, 60deg);
+    }
+    30%{
+        transform: translateZ(-200px) rotate3d(0,1,0, 120deg);
+    }
+    55%{
+        transform: translateZ(-200px) rotate3d(0,1,0, 180deg);
+    }
+    70%{
+        transform: translateZ(-200px) rotate3d(0,1,0, 240deg);
+    } 
+    85%{
+        transform: translateZ(-200px) rotate3d(0,1,0, 300deg);
+    }  
+    100%{
+        transform: translateZ(-200px) rotate3d(0,1,0, 360deg);
+    }
+}
+
+.tile {
+    width: 300px;
+    height: 220px;
+    border-radius: 10%;
+    position: absolute;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 64px;
+    opacity: 0.80;
+}
+
+#tile-1 {
+    background-image: url("https://w7.pngwing.com/pngs/584/319/png-transparent-whatsapp-computer-icons-android-messaging-apps-whatsapp-grass-mobile-phones-instant-messaging.png");
+    background-color: #914E67;
+    transform: rotateY(0deg) translateZ(300px);
+}
+
+#tile-2 {
+    background-image: url("https://cdn.pixabay.com/photo/2016/08/01/21/00/icon-1562136__340.png");
+    background-color: #4FBA6F;
+    transform: rotateY(60deg) translateZ(300px) rotateX(25deg);
+}
+
+#tile-3 {
+    background-image: url("https://icons.getbootstrap.com/assets/img/icons-hero.png");
+    background-color: #5192D2;
+    transform: rotateY(120deg) translateZ(300px) ;
+}
+
+#tile-4 {
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsqFRhYQU6kni8NBrgLp_JfbOvfAGNOwxsVQ&usqp=CAU");
+    background-color: #E8BF1C;
+    transform: rotateY(180deg) translateZ(300px) rotateX(25deg);
+}
+
+#tile-5 {
+    background-image: url("https://img.icons8.com/ios/250/000000/linkedin.png");
+    background-color: #5D7586;
+    transform: rotateY(240deg) translateZ(300px) ;
+}
+#tile-6 {
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnWhK-dS0pTfimubAvfG4qXuews7Koqy3WP4_YKC1vJW-MFu8P7K183zK77Ec_VyV_DnQ&usqp=CAU");
+    background-color: #7e2b31;
+    transform: rotateY(300deg) translateZ(300px) rotateX(25deg);
+}
